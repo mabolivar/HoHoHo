@@ -1,0 +1,105 @@
+package VRPTW.ALNS;
+
+import java.util.ArrayList;
+
+
+
+
+
+public class VRPTW_Manager{
+
+	//static Node[] routes;
+	static ArrayList<Node>[] routes;
+	static double[] routesDist;
+	static int[] routesLoad;
+	static Node[] customers;
+	static ArrayList<Node> requestBank;
+	static double totalDistance;
+	static double FO;
+	
+	/*static int estMT=0;
+	static int estMD=0;
+	static int estBound=0;
+	static int estLABELS=0;
+	static String megaString;
+	*/
+	
+	private int numNodes;
+	private int Cd;
+	private int Ct;
+	
+	/**
+	 * Pulse Stuff
+	
+	*/
+	
+	
+	public VRPTW_Manager( int numNodes) {
+		super();
+		this.numNodes = numNodes;
+		//nodeList = new Hashtable<Integer, VertexPulse>(numNodes);
+		Cd=0;
+		Ct=0;
+		routes = new ArrayList[DataHandler.k];
+		for (int i = 0; i < routes.length; i++) {
+			routes[i]=new ArrayList<Node>();
+		}
+		routesDist = new double[DataHandler.k];
+		routesLoad = new int[DataHandler.k];
+		customers = new Node[numNodes];
+		requestBank = new ArrayList<Node>();
+		//routeSize = new int[DataHandler.k];
+		
+	}
+
+	
+	
+	public  int getNumNodes()
+	{
+		return numNodes;
+	}
+	
+	
+	
+	public boolean addVertex(Node v) {
+		customers[v.getID()] = v;
+		return true;
+	}
+
+	
+	public int getCd()
+	{
+		return Cd;
+	}
+	public int getCt()
+	{
+		return Ct;
+	}
+	public  ArrayList<Node>[] getRoutes(){ 
+			return routes;
+	}
+	public int[] getRoutesLoad(){
+		return routesLoad;
+	}
+	public Node[] getCustomers(){
+		return customers;
+	}
+	public ArrayList<Node> getRequestBank(){
+		return requestBank;
+	}
+	static public void calculateFO(){
+		double sum=0.0;
+		for (int i = 0; i < routes.length; i++) {
+			if (routes[i].size()>0) {
+				Node last = routes[i].get(routes[i].size()-1);
+				double x = last.cumulativeDist + DataHandler.Distance[last.id][0];
+				routesDist[i] = x;
+				sum+= x;	
+			}
+					
+		}
+		totalDistance = sum;
+		sum+=requestBank.size()*DataHandler.brPenalization;
+		FO = sum;
+	}
+}

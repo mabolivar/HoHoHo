@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/vroomrepo/!svn/ver/434/PruebaRepositorio/src/bpc/Heuristics/VRPTW/ALNS
+END
+DataHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/vroomrepo/!svn/ver/434/PruebaRepositorio/src/bpc/Heuristics/VRPTW/ALNS/DataHandler.java
+END
+InitialInsertionHeuristic.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/vroomrepo/!svn/ver/434/PruebaRepositorio/src/bpc/Heuristics/VRPTW/ALNS/InitialInsertionHeuristic.java
+END
+MainVRPTW.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/vroomrepo/!svn/ver/434/PruebaRepositorio/src/bpc/Heuristics/VRPTW/ALNS/MainVRPTW.java
+END
+EdgePulse.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/vroomrepo/!svn/ver/434/PruebaRepositorio/src/bpc/Heuristics/VRPTW/ALNS/EdgePulse.java
+END
+VRPTW_Manager.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/vroomrepo/!svn/ver/434/PruebaRepositorio/src/bpc/Heuristics/VRPTW/ALNS/VRPTW_Manager.java
+END
+ClustersManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/vroomrepo/!svn/ver/434/PruebaRepositorio/src/bpc/Heuristics/VRPTW/ALNS/ClustersManager.java
+END
+Node.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/vroomrepo/!svn/ver/434/PruebaRepositorio/src/bpc/Heuristics/VRPTW/ALNS/Node.java
+END
+LNS.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/vroomrepo/!svn/ver/434/PruebaRepositorio/src/bpc/Heuristics/VRPTW/ALNS/LNS.java
+END
+prueba.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/vroomrepo/!svn/ver/434/PruebaRepositorio/src/bpc/Heuristics/VRPTW/ALNS/prueba.java
+END

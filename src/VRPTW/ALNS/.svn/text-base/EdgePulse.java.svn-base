@@ -1,0 +1,85 @@
+
+package bpc.Heuristics.VRPTW.ALNS;
+
+import java.awt.Robot;
+import java.util.ArrayList;
+
+public class EdgePulse {
+	
+	private int eDist;
+	private int eResource;
+	
+	//if the edge is for split graph, it is 
+	private ArrayList<Integer> rRoute;
+	
+	private EdgePulse nextE;
+	private int id;
+	private Node source;
+	private Node target;
+	
+	public EdgePulse(int d , int res,  Node nT, Node nH, int nid, ArrayList<Integer> nrR) {
+		// TODO Auto-generated constructor stub
+		eDist = d;
+		eResource = res;
+		this.source = nT;
+		this.target = nH;
+		this.id = nid;
+	}
+	
+	public void addNextCommonTailEdge(EdgePulse e){
+		if(nextE!= null){
+			nextE.addNextCommonTailEdge(e);
+		}
+		else{
+			nextE = e;
+		}
+	}
+
+	
+	public EdgePulse getNext()
+	{
+		return nextE;
+	}
+	public void setNextE(EdgePulse e ){
+		nextE = e;
+	}
+	public int getWeightDist(){
+		return eDist;
+	}
+	public int getWeightRes(){
+		return eResource;
+	}
+	public Node getSource(){
+		return source;
+	}
+	
+	public Node getTarget(){
+		return target;
+	}
+	public int getID()
+	{
+		return id;
+	}
+	public EdgePulse findEdgebyTarget( Node targetT)
+	{
+		if(targetT.getID() == this.target.getID())
+		{
+			return this;
+		}else{
+			if(nextE!= null)
+			{
+				return nextE.findEdgebyTarget(targetT);
+			}
+		}
+		return null;
+	}
+	
+	
+
+	public ArrayList<Integer> getRoute() {
+		// TODO Auto-generated method stub
+		return rRoute;
+	}
+
+	
+}
